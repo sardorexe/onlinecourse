@@ -386,6 +386,13 @@
     top: 5%;
     left: -2%;
   }
+  .main .about-courses .course-text .about-title {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .main .about-courses .course-text .about-desc {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 350px) {

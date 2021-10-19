@@ -60,11 +60,18 @@
   }
 }
 
+@media (max-width: 961px) {
+  .header {
+    background-position: center center;
+  }
+}
 
 
 @media (max-width: 448px) {
   .header {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../assets/bg.jpg);
+    background-position: center center;
+
     padding: 0 20px;
     &_content {
       .content-title {
@@ -83,11 +90,15 @@
     padding: 0 15px;
     &_content {
       .content-title {
-        font-size: 20px;
+        font-size: 18px;
       }
       .content-desc {
-        font-size: 30px;
+        font-size: 26px;
+        br {
+          display: none;
+        }
       }
     }
   }
 }
+

@@ -91,10 +91,17 @@
   color: #fff;
 }
 
+@media (max-width: 961px) {
+  .header {
+    background-position: center center;
+  }
+}
+
 @media (max-width: 448px) {
   .header {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../../assets/bg.jpg);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/bg.jpg);
+    background-position: center center;
     padding: 0 20px;
   }
   .header_content .content-title {
@@ -110,10 +117,13 @@
     padding: 0 15px;
   }
   .header_content .content-title {
-    font-size: 20px;
+    font-size: 18px;
   }
   .header_content .content-desc {
-    font-size: 30px;
+    font-size: 26px;
+  }
+  .header_content .content-desc br {
+    display: none;
   }
 }
 /*# sourceMappingURL=Header.css.map */
