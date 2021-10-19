@@ -1,0 +1,365 @@
+@import "../variables";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: $bg-color;
+  padding-bottom: 30px;
+  .about-courses {
+    width: 73%;
+    .course-text {
+      .about-title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+      .about-desc {
+        margin-bottom: 25px;
+        color: $gray;
+        font-size: 19px;
+      }
+    }
+
+    .about-boxes {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 25px;
+      .box {
+        border-radius: 8px;
+        background: $box-color;
+        padding: 25px 30px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        h2 {
+          margin-top: 15px;
+          color: #fff;
+        }
+        ul {
+          margin-top: 5px;
+          li {
+            list-style: none;
+            color: #fff;
+            margin: 20px 0;
+            margin-left: 23px;
+            padding-left: 15px;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0%;
+              left: -5%;
+              width: 20px;
+              height: 20px;
+              background: url(../../assets/list-icon.svg);
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .course-payment {
+    width: 24%;
+    transform: translateY(-10%);
+    .payment-box {
+      padding: 20px;
+      border-radius: 8px;
+      background: $box-color;
+      width: 100%;
+      height: 85%;
+      .box-title {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .box-desc {
+        color: $gray;
+        font-size: 14px;
+      }
+
+      .select-course {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        input[type="radio"] {
+          display: none;
+        }
+        #option-1:checked ~ .option-1,
+        #option-2:checked ~ .option-2 {
+          background: linear-gradient(to right, $orange, $pink);
+          .label {
+            .check {
+              background: linear-gradient(to right, $orange, $pink);
+              border: none;
+              opacity: 1;
+              &::before {
+                background: url(../../assets/check.svg);
+              }
+            }
+            .price {
+              background: #fff;
+              color: #000;
+            }
+          }
+        }
+
+        .border-wrap {
+          border-radius: 5px;
+          cursor: pointer;
+          margin: 5px 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background: #212421;
+          transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+          .label {
+            width: 100%;
+            background: #161815;
+            margin: 2.3px;
+            display: flex;
+            border-radius: 3px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 13px;
+            .start {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .check {
+                margin-right: 10px;
+                width: 16px;
+                background: linear-gradient(to right, $orange, $pink);
+                opacity: 0.4;
+                border-radius: 50%;
+                height: 16px;
+                position: relative;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                  background: #161815;
+                  transform: scale(0.7);
+                }
+              }
+              .title {
+                color: #fff;
+                font-size: 13px;
+                font-weight: 700;
+              }
+            }
+            .price {
+              background: #3f3f3f;
+              color: #fff;
+              font-size: 13px;
+              font-weight: 700;
+              padding: 8px;
+              border-radius: 11px;
+            }
+          }
+        }
+      }
+      .info-course {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 15px;
+        .info {
+          color: #fff;
+          font-size: 14px;
+          margin: 8px 0;
+        }
+        .info-body {
+          color: $gray;
+          font-size: 14px;
+          margin: 5px 0;
+        }
+        .info-submit {
+          margin-top: 45px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 12px;
+            color: #fff;
+            margin-bottom: 5px;
+          }
+          button {
+            background: $green;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 18px;
+            font-weight: 700;
+            font-size: 24px;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1264px) {
+  .main {
+    .about-courses {
+      width: 60%;
+      .course-text {
+        .about-title {
+          font-size: 18px;
+        }
+
+        .about-desc {
+          font-size: 15px;
+        }
+      }
+    }
+    .course-payment {
+      transform: translateY(0);
+      width: 38%;
+      .payment-box {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    .about-courses {
+      width: 50%;
+      .about-boxes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .course-payment {
+      width: 49%;
+      transform: translateY(-3%);
+    }
+  }
+}
+
+@media (max-width: 734px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    .about-courses {
+      width: 100%;
+    }
+
+    .course-payment {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 448px) {
+  .main {
+    background: #171918;
+    padding: 0 20px;
+  }
+}
+
+
+@media (max-width: 382px) {
+  .main {
+    padding: 0 15px;
+    .about-courses {
+      .about-boxes {
+        .box {
+          padding: 15px;
+          .title {
+            font-size: 20px;
+          }
+          ul {
+            li {
+              margin-left: 6px;
+
+              font-size: 14px;
+              &::before {
+                width: 12px;
+                height: 12px;
+                top: 5%;
+                left: -2%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 350px) {
+  .main {
+    .course-payment {
+      .payment-box {
+        .box-title {
+          font-size: 20px;
+        }
+        .box-desc {
+          font-size: 12px;
+        }
+        .select-course {
+          .border-wrap {
+            .label {
+              .start {
+                .check {
+                  width: 12px;
+                  height: 12px;
+                }
+                .title {
+                  font-size: 10px;
+                  margin-right: 5px;
+                }
+              }
+              .price {
+                font-size: 10px;
+                padding: 4px;
+              }
+            }
+          }
+        }
+        .info-course {
+          .text {
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .info-submit {
+            margin-top: 20px;
+            p {
+              font-size: 10px;
+            }
+
+            button {
+              font-size: 18px;
+              padding: 15px;
+            }
+          }
+        }
+      
+      }
+    }
+
+  } 
+}
