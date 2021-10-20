@@ -71,23 +71,9 @@
   .header {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../assets/bg.jpg);
     background-position: center center;
-
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 0 20px;
-    &_content {
-      .content-title {
-        font-size: 24px;
-      }
-      .content-desc {
-        font-size: 36px;
-      }
-    }
-  }
-}
-
-
-@media (max-width: 382px) {
-  .header {
-    padding: 0 15px;
     &_content {
       .content-title {
         font-size: 18px;
@@ -99,6 +85,14 @@
         }
       }
     }
+  }
+}
+
+
+@media (max-width: 382px) {
+  .header {
+    padding: 0 15px;
+    
   }
 }
 

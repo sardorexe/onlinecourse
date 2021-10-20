@@ -102,19 +102,9 @@
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../../assets/bg.jpg);
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/bg.jpg);
     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 0 20px;
-  }
-  .header_content .content-title {
-    font-size: 24px;
-  }
-  .header_content .content-desc {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 382px) {
-  .header {
-    padding: 0 15px;
   }
   .header_content .content-title {
     font-size: 18px;
@@ -124,6 +114,12 @@
   }
   .header_content .content-desc br {
     display: none;
+  }
+}
+
+@media (max-width: 382px) {
+  .header {
+    padding: 0 15px;
   }
 }
 /*# sourceMappingURL=Header.css.map */
