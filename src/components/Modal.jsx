@@ -1,4 +1,4 @@
-import img from "./assets/modal.jpg";
+import modal from "./assets/modal.jpg";
 import "./styles/Modal/Modal.css"
 
 const Modal = ({closeModal}) => {
@@ -6,7 +6,7 @@ const Modal = ({closeModal}) => {
     <div onClick={closeModal} className="modal">
       <div className="modal-box">
         <div className="box-img">
-          <img src={img} alt="Modal image" />
+          <img src={modal} alt="Modal" />
         </div>
         <div className="box-content">
           <div className="content">

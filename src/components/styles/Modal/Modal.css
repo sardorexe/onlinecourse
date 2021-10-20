@@ -40,6 +40,8 @@
 .modal-box .box-img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .modal-box .box-content {
@@ -167,11 +169,19 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .modal-box .box-img {
-    width: 50%;
+  .modal-box .box-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
   }
   .modal-box .box-content {
     width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal-box .box-img {
+    display: none;
   }
 }
 
